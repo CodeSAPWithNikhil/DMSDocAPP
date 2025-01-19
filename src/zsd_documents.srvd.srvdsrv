@@ -1,0 +1,5 @@
+@EndUserText.label: 'documents'
+define service Zsd_documents {
+  expose ZC_DOCUMENTS   as documents;
+  expose zc_attachments as attachments;
+}

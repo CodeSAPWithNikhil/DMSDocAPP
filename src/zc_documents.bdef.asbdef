@@ -1,0 +1,33 @@
+managed implementation in class zbp_c_documents unique;
+strict ( 2 );
+
+define behavior for ZC_DOCUMENTS alias _document
+with unmanaged save
+late numbering
+//persistent table <???>
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  //  create;
+  // update;
+  //delete;
+  factory action copy [1];//parameter zc_doc_types_abstract [1];
+  association _attachments { create; }
+  field ( readonly ) DocumentInfoRecordDocNumber;
+}
+
+define behavior for zc_attachments alias _attachments
+with unmanaged save
+//persistent table <???>
+late numbering
+lock dependent by _document
+authorization dependent by _document
+//etag master <field_name>
+{
+  // update;
+  // delete;
+  field ( readonly ) DocumentInfoRecordDocType, DocumentInfoRecordDocNumber, DocumentInfoRecordDocVersion, DocumentInfoRecordDocPart, DOCUMENTINDEX,
+  PhysicalDocument, FileUUID, FILEDATA, downloadUrl;
+  association _document;
+}
