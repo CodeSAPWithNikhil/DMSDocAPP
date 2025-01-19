@@ -1,0 +1,3 @@
+/sap/opu/odata/sap/ZSD_DOCUMENTS_V2/attachments(DocumentInfoRecordDocNumber='&1',DocumentInfoRecordDocType='&2',
+DocumentInfoRecordDocVersion='&3',DocumentInfoRecordDocPart='&4',DocumentIndex=&5,FileUUID='&6',
+PhysicalDocument='&7')/$value
