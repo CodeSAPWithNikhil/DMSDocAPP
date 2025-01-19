@@ -8,7 +8,7 @@ This is a basic demo app built using RAP (RESTful ABAP Programming Model) to cop
 
 #### What Does It Do? 
 - **Copies DMS Documents**:  
-   The app uses the **custom factory action `COPY`** to duplicate documents. The actual copying happens during the transactional phase using **`cl_abap_parallel`**, keeping everything quick and seamless.  
+   The app uses the **custom factory action `COPY`** to duplicate documents. The actual copying happens during the transactional phase using **`cl_abap_parallel`** that calls BAPI_DOCUMENT_CREATE2, keeping everything quick and seamless.  
 
 - **Displays the Files Dynamically**:  
    A **dynamic URI** is created in a **virtual element** to display the copied file after clicking it.  
